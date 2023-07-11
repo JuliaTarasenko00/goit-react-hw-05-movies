@@ -9,8 +9,10 @@ const Home = () => {
 
   useEffect(() => {
     const fetchFilm = async () => {
-      getFilms().then(resFilm => setFilms(resFilm.results));
+      const film = await getFilms();
+      setFilms(film.results);
     };
+
     fetchFilm();
   }, []);
 

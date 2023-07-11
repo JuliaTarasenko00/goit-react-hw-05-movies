@@ -1,5 +1,6 @@
 .films_list {
-  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -17,5 +18,5 @@
 .films_item_title {
   color: white;
   font-size: 20px;
-  padding-top: 10px;
+  margin-top: 10px;
 }

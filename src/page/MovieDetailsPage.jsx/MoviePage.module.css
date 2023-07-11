@@ -1,0 +1,51 @@
+.movies_card {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+  padding: 20px 0 20px 0;
+}
+
+.movies_card_list {
+  width: 50%;
+}
+
+.movies_card_title {
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.movies_card_renting {
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.movies_card_overview {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.movies_card_genre {
+  color: tomato;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.movies_cast,
+.movies_reviews {
+  color: white;
+}
+.movies_detail {
+  margin-top: 30px;
+  display: flex;
+  gap: 40px;
+  margin-bottom: 30px;
+}

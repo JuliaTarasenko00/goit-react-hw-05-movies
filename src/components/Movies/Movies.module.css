@@ -1,0 +1,21 @@
+.films_list {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.films_item {
+  width: 300px;
+}
+
+.films_item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.films_item_title {
+  color: white;
+  font-size: 20px;
+  padding-top: 10px;
+}

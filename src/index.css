@@ -1,6 +1,7 @@
 @import-normalize; /* bring in normalize.css styles */
 
 body {
+  background-color: #111;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -24,10 +25,19 @@ h3 {
 ul {
   margin: 0;
   padding-left: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+#root {
+  padding: 0 20px 0 20px;
 }

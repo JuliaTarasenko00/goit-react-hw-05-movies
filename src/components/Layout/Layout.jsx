@@ -4,15 +4,15 @@ import css from './Layout.module.css';
 const Layout = () => {
   return (
     <>
-      <nav>
-        <ul>
+      <nav className={css.navigation}>
+        <ul className={css.navigation_list}>
           <li>
             <NavLink
               to="/"
-              className={css.navigation}
+              className={css.navigation_link}
               style={({ isActive }) => {
                 return {
-                  color: isActive ? 'red' : 'black',
+                  color: isActive ? 'tomato' : 'white',
                 };
               }}
             >
@@ -22,10 +22,10 @@ const Layout = () => {
           <li>
             <NavLink
               to="/movies"
-              className={css.navigation}
+              className={css.navigation_link}
               style={({ isActive }) => {
                 return {
-                  color: isActive ? 'red' : 'black',
+                  color: isActive ? 'tomato' : 'white',
                 };
               }}
             >

@@ -29,7 +29,7 @@ const MovieDetails = () => {
   return (
     <>
       <div>
-        <img src={url} alt={original_title} width="300" />
+        <img src={url} alt={original_title} width="300" loading="lazy" />
         <ul>
           <li key={moviesId}>
             <p>{original_title}</p>

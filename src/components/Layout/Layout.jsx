@@ -4,7 +4,7 @@ import css from './Layout.module.css';
 const Layout = () => {
   return (
     <>
-      <nav className={css.sidebar}>
+      <nav>
         <ul>
           <li>
             <NavLink

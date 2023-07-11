@@ -1,20 +1,23 @@
-import { useEffect, useState } from 'react';
-import getFilms from '../Api';
-import { Link } from 'react-router-dom';
+// import { useEffect, useState } from 'react';
+// import getFilms from '../Api';
+// import { Link } from 'react-router-dom';
+
+import Movies from 'components/Movies/Movies';
 
 const Home = () => {
-  const [films, setFilms] = useState([]);
+  // const [films, setFilms] = useState([]);
 
-  useEffect(() => {
-    const fetchFilm = async () => {
-      getFilms().then(resFilm => setFilms(resFilm.results));
-    };
-    fetchFilm();
-  }, []);
+  // useEffect(() => {
+  //   const fetchFilm = async () => {
+  //     getFilms().then(resFilm => setFilms(resFilm.results));
+  //   };
+  //   fetchFilm();
+  // }, []);
 
   return (
     <>
-      <ul>
+      <Movies />
+      {/* <ul>
         {films.map(({ id, title, poster_path }) => {
           let url = poster_path
             ? `https://image.tmdb.org/t/p/original${poster_path}`
@@ -28,7 +31,7 @@ const Home = () => {
             </li>
           );
         })}
-      </ul>
+      </ul> */}
     </>
   );
 };

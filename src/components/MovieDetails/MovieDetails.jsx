@@ -7,7 +7,6 @@ const MovieDetails = () => {
 
   return (
     <>
-      <h1>{moviesId}</h1>
       <ul>
         <li>
           <Link to="cast">Cast</Link>

@@ -7,7 +7,7 @@ const Movies = () => {
         {['films1', 'films2', 'films3', 'films4'].map(film => {
           return (
             <li key={film}>
-              <Link to={`${film}`}>{film}</Link>
+              <Link to={`/movies/${film}`}>{film}</Link>
             </li>
           );
         })}

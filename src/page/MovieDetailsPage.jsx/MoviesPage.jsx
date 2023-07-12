@@ -52,6 +52,7 @@ const MovieDetailsPage = ({ films, moviesId }) => {
           </p>
         </div>
       </section>
+      <p className={css.movies_information}>Additional information</p>
       <ul className={css.movies_detail}>
         <li>
           <Link to="cast" className={css.movies_cast}>

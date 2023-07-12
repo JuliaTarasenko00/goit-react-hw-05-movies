@@ -1,0 +1,20 @@
+.swiper_movie {
+  margin-bottom: 50px;
+}
+
+.movie_cast_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.movies_cast_item {
+  width: 200px;
+}
+
+.movies_cast_name {
+  color: white;
+}
+.wrap {
+  width: 100%;
+}

@@ -1,11 +1,11 @@
 .movies_card {
-  width: 1200px;
   margin: 0 auto;
   margin-top: 30px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 40px;
+
   padding: 20px 0 20px 0;
 }
 
@@ -42,10 +42,19 @@
 .movies_cast,
 .movies_reviews {
   color: white;
+  font-weight: 800;
 }
+
 .movies_detail {
   margin-top: 30px;
   display: flex;
   gap: 40px;
   margin-bottom: 30px;
+}
+
+.movies_information {
+  font-size: 30px;
+  color: #0277bd;
+  margin-top: 25px;
+  font-weight: 600;
 }

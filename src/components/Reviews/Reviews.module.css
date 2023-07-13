@@ -1,0 +1,16 @@
+.reviews {
+  margin-bottom: 50px;
+}
+.reviews_item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.reviews_name {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.reviews_content {
+  text-align: justify;
+  color: white;
+}

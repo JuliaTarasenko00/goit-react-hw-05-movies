@@ -1,11 +1,9 @@
-.swiper_movie {
-  margin-bottom: 50px;
-}
-
 .movie_cast_list {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
 .movies_cast_item {

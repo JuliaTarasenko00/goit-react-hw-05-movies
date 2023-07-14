@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom';
 import css from './Movies.module.css';
 import ImgCart from 'components/ImgCart';
 
-const MoviesList = ({ filmsList }) => {
+const MoviesList = ({ filmsList, location }) => {
   return (
     <ul className={css.films_list}>
       {filmsList?.map(({ id, original_title, poster_path }) => {
         return (
           <li key={id} className={css.films_item}>
-            <Link to={`/movies/${id}`}>
+            <Link to={`/movies/${id}`} state={{ from: location }}>
               <img
                 src={ImgCart(poster_path)}
                 alt={original_title}

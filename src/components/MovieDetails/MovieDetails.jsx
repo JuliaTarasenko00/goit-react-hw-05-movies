@@ -8,6 +8,7 @@ const MovieDetails = () => {
   const [films, setFilms] = useState([]);
 
   useEffect(() => {
+    if (!moviesId) return;
     const fetchFilmList = async () => {
       const film = await getFilmsId(moviesId);
       setFilms(film);

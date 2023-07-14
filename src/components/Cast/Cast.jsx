@@ -17,6 +17,7 @@ const Cast = () => {
   const [cast, setCast] = useState([]);
 
   useEffect(() => {
+    if (!moviesId) return;
     const fetchFilmCast = async () => {
       const cast = await getFilmsCast(moviesId);
       setCast(cast.cast);
@@ -25,7 +26,7 @@ const Cast = () => {
   }, [moviesId]);
 
   return (
-    <>
+    <div className={css.cart}>
       <Swiper
         spaceBetween={20}
         slidesPerView={5}
@@ -53,7 +54,7 @@ const Cast = () => {
           );
         })}
       </Swiper>
-    </>
+    </div>
   );
 };
 

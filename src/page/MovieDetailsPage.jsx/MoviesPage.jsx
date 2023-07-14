@@ -1,8 +1,13 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 import css from './MoviePage.module.css';
 import ImgCart from 'components/ImgCart';
+import { Suspense, useRef } from 'react';
+import Loader from 'components/Loader';
 
 const MovieDetailsPage = ({ films, moviesId }) => {
+  const location = useLocation();
+  const backToMovies = useRef(location.state?.from ?? '/movies');
+
   const {
     original_title,
     poster_path,
@@ -15,6 +20,9 @@ const MovieDetailsPage = ({ films, moviesId }) => {
 
   return (
     <>
+      <Link to={backToMovies.current} className={css.movies_back}>
+        &#11164; Back to
+      </Link>
       <section
         className={css.movies_card}
         style={{
@@ -62,7 +70,9 @@ const MovieDetailsPage = ({ films, moviesId }) => {
         </li>
       </ul>
       <section>
-        <Outlet />
+        <Suspense fallback={<Loader />}>
+          <Outlet />
+        </Suspense>
       </section>
     </>
   );

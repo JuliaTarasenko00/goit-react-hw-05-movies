@@ -46,3 +46,14 @@ export const getFilmReviews = async id => {
     console.log(error.message);
   }
 };
+
+export const getFilmSearch = async query => {
+  try {
+    const { data } = await axios.get(
+      `${baseURL}search/movie?query=${query}&include_adult=false&language=en-US&api_key=${API_KEY}&page=1`
+    );
+    return data;
+  } catch (error) {
+    console.log(error.message);
+  }
+};

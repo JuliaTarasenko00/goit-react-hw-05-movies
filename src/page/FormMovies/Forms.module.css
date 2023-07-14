@@ -1,0 +1,27 @@
+.movie_form {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.movie_input {
+  width: 400px;
+  padding: 8px;
+  border-radius: 10px;
+  outline: none;
+  border: 3px solid tomato;
+  height: 30px;
+  font-size: 20px;
+}
+
+.movie_wrap {
+  position: relative;
+}
+
+.movie_btn {
+  position: absolute;
+  top: 3px;
+  right: 8px;
+  background-color: transparent;
+  border: transparent;
+  font-size: 30px;
+}

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { getFilms } from '../Api';
 import css from './Home.module.css';
 
-import Movies from 'components/Movies/Movies';
+import MoviesList from 'page/MoviesList/MoviesList';
 
 const Home = () => {
   const [films, setFilms] = useState([]);
@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <>
       <h1 className={css.title}>Trending Today :</h1>
-      <Movies filmsList={films} />
+      <MoviesList filmsList={films} />
     </>
   );
 };

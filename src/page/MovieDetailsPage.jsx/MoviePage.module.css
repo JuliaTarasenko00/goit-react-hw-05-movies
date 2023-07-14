@@ -1,6 +1,6 @@
 .movies_card {
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -58,4 +58,11 @@
   color: #0277bd;
   margin-top: 25px;
   font-weight: 600;
+}
+
+.movies_back {
+  margin-top: 30px;
+  display: block;
+  color: white;
+  font-size: 25px;
 }

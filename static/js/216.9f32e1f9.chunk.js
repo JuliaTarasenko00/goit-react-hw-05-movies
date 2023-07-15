@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[216],{7216:function(e,t,r){r.r(t);var a=r(184);t.default=function(){return(0,a.jsx)("img",{style:{margin:"auto",marginTop:"50px"},src:"https://img.freepik.com/free-vector/404-error-with-a-cute-animal-concept-illustration_114360-5528.jpg",alt:"Error",width:"500",loading:"lazy"})}}}]);
-//# sourceMappingURL=216.9f32e1f9.chunk.js.map

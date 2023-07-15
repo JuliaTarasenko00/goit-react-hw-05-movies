@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import css from './Forms.module.css';
 import { useRef } from 'react';
 
-const FormMovies = ({ setSearchParams }) => {
+const FormMovies = ({ setSearchParams, searchMovies }) => {
   const inputRef = useRef(null);
   const onSubmitInput = ev => {
     ev.preventDefault();
@@ -12,6 +14,12 @@ const FormMovies = ({ setSearchParams }) => {
       query: value,
     });
     inputRef.current.value = '';
+
+    if (searchMovies === value) {
+      return toast.warn(
+        `You are already viewing movies with the title '${value}'`
+      );
+    }
   };
 
   return (
@@ -30,6 +38,7 @@ const FormMovies = ({ setSearchParams }) => {
           </button>
         </div>
       </form>
+      <ToastContainer theme="colored" />
     </>
   );
 };

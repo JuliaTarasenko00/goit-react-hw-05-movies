@@ -33,7 +33,10 @@ const Movies = () => {
 
   return (
     <>
-      <FormMovies setSearchParams={setSearchParams} />
+      <FormMovies
+        setSearchParams={setSearchParams}
+        searchMovies={searchMovies}
+      />
       {movie.length === 0 && (
         <p
           style={{

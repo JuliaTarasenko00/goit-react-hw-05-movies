@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import css from './MoviePage.module.css';
 import ImgCart from 'components/ImgCart';
@@ -79,3 +81,8 @@ const MovieDetailsPage = ({ films, moviesId }) => {
 };
 
 export default MovieDetailsPage;
+
+MovieDetailsPage.propTypes = {
+  films: PropTypes.object.isRequired,
+  moviesId: PropTypes.string.isRequired,
+};

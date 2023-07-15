@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import FormMovies from 'page/FormMovies/FormsMovies';
 import { getFilmSearch } from 'components/Api';
@@ -21,7 +23,7 @@ const Movies = () => {
       const searchMovie = await getFilmSearch(searchMovies);
       if (searchMovie.results.length === 0) {
         setLoader(false);
-        return alert(`Oxxx, film not found ${searchMovies} `);
+        return toast.error(`Oxxx, film not found ${searchMovies} `);
       }
       setLoader(false);
       setMovie(searchMovie.results);
@@ -48,6 +50,7 @@ const Movies = () => {
       )}
       {movie && <MoviesList filmsList={movie} location={location} />}
       {isLoader && <Loader />}
+      <ToastContainer theme="colored" />
     </>
   );
 };

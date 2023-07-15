@@ -5,7 +5,7 @@ import MovieDetailsPage from 'page/MovieDetailsPage.jsx/MoviesPage';
 
 const MovieDetails = () => {
   const { moviesId } = useParams();
-  const [films, setFilms] = useState([]);
+  const [films, setFilms] = useState({});
 
   useEffect(() => {
     if (!moviesId) return;

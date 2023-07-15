@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const ImgCart = img => {
   const image = img
     ? `https://image.tmdb.org/t/p/original${img}`
@@ -6,3 +8,7 @@ const ImgCart = img => {
 };
 
 export default ImgCart;
+
+ImgCart.propTypes = {
+  img: PropTypes.string.isRequired,
+};

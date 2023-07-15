@@ -20,15 +20,3 @@
   font-size: 20px;
   margin-top: 10px;
 }
-
-.films_btn {
-  color: white;
-  font-size: 50px;
-  background: transparent;
-  border-radius: 20%;
-  border: 2px solid tomato;
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  cursor: pointer;
-}

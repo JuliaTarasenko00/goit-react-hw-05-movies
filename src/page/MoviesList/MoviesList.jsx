@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import css from './Movies.module.css';
 import ImgCart from 'components/ImgCart';
+import BackToTop from 'page/BackToTop';
 
 const MoviesList = ({ filmsList, location }) => {
   return (
@@ -24,6 +25,7 @@ const MoviesList = ({ filmsList, location }) => {
           );
         })}
       </ul>
+      <BackToTop />
     </>
   );
 };

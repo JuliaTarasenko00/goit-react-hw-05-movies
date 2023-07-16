@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
-import { getFilms } from '../Api';
+import { getFilms } from '../../components/Api';
 import css from './Home.module.css';
 
-import MoviesList from 'page/MoviesList/MoviesList';
+import MoviesList from 'components/MoviesList/MoviesList';
+import { useLocation } from 'react-router-dom';
 
 const Home = () => {
   const [films, setFilms] = useState([]);
+  const location = useLocation();
 
   useEffect(() => {
     const fetchFilm = async () => {
@@ -19,7 +21,7 @@ const Home = () => {
   return (
     <>
       <h1 className={css.title}>Trending Today :</h1>
-      <MoviesList filmsList={films} />
+      <MoviesList filmsList={films} location={location} />
     </>
   );
 };

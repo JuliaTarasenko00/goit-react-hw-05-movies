@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import css from './Movies.module.css';
 import ImgCart from 'components/ImgCart';
-import BackToTop from 'page/BackToTop';
+import BackToTop from 'components/BackToTop';
 
-const MoviesList = ({ filmsList, location }) => {
+const MoviesList = ({ filmsList }) => {
+  const location = useLocation();
+
   return (
     <>
       <ul className={css.films_list}>

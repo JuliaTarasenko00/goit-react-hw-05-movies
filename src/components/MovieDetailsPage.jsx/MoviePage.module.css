@@ -66,3 +66,13 @@
   color: white;
   font-size: 25px;
 }
+
+.movies_card_favorite {
+  color: red;
+  border: transparent;
+  border-radius: 50%;
+  font-size: 30px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}

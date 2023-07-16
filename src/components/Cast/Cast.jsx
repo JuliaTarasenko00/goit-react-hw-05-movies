@@ -27,6 +27,11 @@ const Cast = () => {
 
   return (
     <div className={css.cart}>
+      {cast.length === 0 && (
+        <p className={css.movies_cast_name}>
+          We don't have any cast for this movie
+        </p>
+      )}
       <Swiper
         spaceBetween={20}
         slidesPerView={5}

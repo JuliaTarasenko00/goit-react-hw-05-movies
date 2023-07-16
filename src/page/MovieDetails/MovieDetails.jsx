@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getFilmsId } from '../Api';
-import MovieDetailsPage from 'page/MovieDetailsPage.jsx/MoviesPage';
+import { getFilmsId } from '../../components/Api';
+import MovieDetailsPage from 'components/MovieDetailsPage.jsx/MoviesPage';
 
 const MovieDetails = () => {
   const { moviesId } = useParams();

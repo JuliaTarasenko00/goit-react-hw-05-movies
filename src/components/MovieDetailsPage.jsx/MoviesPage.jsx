@@ -8,7 +8,7 @@ import Loader from 'components/Loader';
 
 const MovieDetailsPage = ({ films, moviesId }) => {
   const location = useLocation();
-  const backToMovies = useRef(location.state?.from ?? '/movies');
+  const backToMovies = useRef(location.state?.from ?? '/');
 
   const {
     original_title,

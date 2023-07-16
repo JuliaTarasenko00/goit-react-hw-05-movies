@@ -1,15 +1,14 @@
 import { useEffect, useState } from 'react';
-import { useLocation, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import FormMovies from 'page/FormMovies/FormsMovies';
+import FormMovies from 'components/FormMovies/FormsMovies';
 import { getFilmSearch } from 'components/Api';
-import MoviesList from 'page/MoviesList/MoviesList';
+import MoviesList from 'components/MoviesList/MoviesList';
 import Loader from 'components/Loader';
 
 const Movies = () => {
-  const location = useLocation();
   const [movie, setMovie] = useState([]);
 
   const [isLoader, setLoader] = useState(false);
@@ -47,11 +46,11 @@ const Movies = () => {
             textAlign: 'center',
           }}
         >
-          Your movies will be here{' '}
+          Your movies will be here
           <span style={{ color: 'red' }}>&#10084;</span>
         </p>
       )}
-      {movie && <MoviesList filmsList={movie} location={location} />}
+      {movie && <MoviesList filmsList={movie} />}
       {isLoader && <Loader />}
       <ToastContainer theme="colored" />
     </>

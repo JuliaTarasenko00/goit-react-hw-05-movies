@@ -20,12 +20,12 @@ const Movies = () => {
     const fetchFilmSearch = async () => {
       setLoader(true);
       const searchMovie = await getFilmSearch(searchMovies);
+      setMovie(searchMovie.results);
       if (searchMovie.results.length === 0) {
         setLoader(false);
         return toast.error(`Oxxx, film not found ${searchMovies} `);
       }
       setLoader(false);
-      setMovie(searchMovie.results);
     };
     fetchFilmSearch();
   }, [searchMovies]);

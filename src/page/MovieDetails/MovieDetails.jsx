@@ -9,11 +9,15 @@ const MovieDetails = () => {
 
   useEffect(() => {
     if (!moviesId) return;
-    const fetchFilmList = async () => {
-      const film = await getFilmsId(moviesId);
-      setFilms(film);
-    };
-    fetchFilmList();
+    try {
+      const fetchFilmList = async () => {
+        const film = await getFilmsId(moviesId);
+        setFilms(film);
+      };
+      fetchFilmList();
+    } catch (error) {
+      console.log(error);
+    }
   }, [moviesId]);
 
   return <MovieDetailsPage films={films} moviesId={moviesId} />;

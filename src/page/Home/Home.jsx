@@ -10,12 +10,16 @@ const Home = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const fetchFilm = async () => {
-      const film = await getFilms();
-      setFilms(film.results);
-    };
+    try {
+      const fetchFilm = async () => {
+        const film = await getFilms();
+        setFilms(film.results);
+      };
 
-    fetchFilm();
+      fetchFilm();
+    } catch (error) {
+      console.log(error);
+    }
   }, []);
 
   return (
